@@ -206,6 +206,8 @@ The system identifies large-scale fraud attempts by detecting:
 * Sudden spikes in claims in a specific region
 * Repeated anomaly patterns
 
+This helps detect coordinated fraud attacks where multiple users attempt to exploit the system simultaneously.
+
 ---
 
 ### Fairness Mechanism
@@ -213,6 +215,61 @@ The system identifies large-scale fraud attempts by detecting:
 * Small inconsistencies are tolerated
 * No decision is based on a single signal
 * Confidence-based validation ensures genuine users are protected
+
+---
+
+## Adversarial Defense & Anti-Spoofing Strategy
+
+To ensure SmartShift remains reliable under adversarial conditions such as GPS spoofing and coordinated fraud attacks, the system incorporates a dedicated anti-spoofing and validation layer.
+
+---
+
+### Differentiation: Genuine vs Fraudulent Users
+
+SmartShift evaluates behavioral consistency rather than relying only on location data.
+
+* Genuine users show natural movement, realistic routes, and consistent app usage
+* Fraudulent users often show static positions, unrealistic jumps, or mismatched activity
+
+The system compares real-time behavior with historical patterns to identify anomalies.
+
+---
+
+### Data Used Beyond GPS
+
+SmartShift strengthens validation using multiple signals:
+
+* GPS location data
+* Order acceptance and completion patterns
+* Session activity logs
+* Environmental conditions
+* Device motion consistency
+
+A payout decision is made only when these signals align logically.
+
+---
+
+### UX Balance: Protecting Genuine Users
+
+SmartShift ensures that genuine users are not unfairly penalized.
+
+* Minor inconsistencies are tolerated
+* Medium-risk cases are not immediately rejected
+* Payouts may be temporarily held for further validation
+
+If supporting signals confirm genuine behavior, the payout is approved.
+
+---
+
+### Handling Coordinated Fraud
+
+The system identifies large-scale fraud scenarios by analyzing:
+
+* Similar behavioral patterns across multiple users
+* Sudden regional spikes in claims
+* Repeated anomaly trends
+
+This allows SmartShift to detect fraud rings and respond proactively.
 
 ---
 
