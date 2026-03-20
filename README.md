@@ -356,7 +356,7 @@ SmartShift is built using a MERN-based architecture:
 ---
 
 
-##System Architecture
+**##System Architecture**
 The following diagram illustrates the overall architecture of SmartShift, including the AI decision engine, parametric trigger system, fraud detection layer, and external integrations.
 <img width="851" height="663" alt="image" src="https://github.com/user-attachments/assets/1dd6e518-9cb1-4f82-a291-0fc7598e5c1d" />
 
