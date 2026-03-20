@@ -91,7 +91,7 @@ SmartShift introduces a system that automatically detects disruptions and provid
 
 SmartShift follows a structured decision flow:
 
-Detect disruption → Evaluate impact → Validate authenticity → Trigger payout
+Detect disruption → Evaluate impact (Loss Score) → Validate authenticity (Fraud Score) → Trigger payout
 
 The system continuously analyzes environmental data and user behavior to make real-time decisions.
 
@@ -156,6 +156,12 @@ Fraud Score =
 
 SmartShift combines Loss Score and Fraud Score to ensure payouts are both fair and secure.
 
+### Final Decision Logic
+
+- High Loss + Low Fraud → Approved  
+- High Loss + Medium Fraud → Temporarily held for verification  
+- Any Loss + High Fraud → Rejected  
+
 ---
 
 ## AI / Machine Learning Integration
@@ -180,7 +186,7 @@ Continuously refines thresholds based on incoming data trends.
 
 ---
 
-## Adversarial Defense Strategy
+## Adversarial Defense & Anti-Spoofing Strategy
 
 SmartShift is designed to remain reliable even under fraud attempts.
 
@@ -349,6 +355,15 @@ SmartShift is built using a MERN-based architecture:
 
 ---
 
+
+##System Architecture
+The following diagram illustrates the overall architecture of SmartShift, including the AI decision engine, parametric trigger system, fraud detection layer, and external integrations.
+<img width="851" height="663" alt="image" src="https://github.com/user-attachments/assets/1dd6e518-9cb1-4f82-a291-0fc7598e5c1d" />
+
+Flow: Detect → Evaluate → Validate → Payout
+
+---
+
 ## Conclusion
 
 SmartShift provides a practical and scalable solution to a real problem faced by gig workers.
@@ -358,3 +373,5 @@ By combining real-time monitoring, AI-driven decision-making, and automated payo
 At the same time, its fraud detection and anti-spoofing mechanisms maintain system integrity without compromising fairness.
 
 The result is a system that is reliable, adaptive, and ready for real-world deployment.
+
+SmartShift is designed not just to automate payouts, but to ensure trust, fairness, and resilience even under adversarial conditions.
